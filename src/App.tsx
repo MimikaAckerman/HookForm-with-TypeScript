@@ -20,11 +20,12 @@ function App() {
   return (
     <>
       <form onSubmit={onSubmit}>
+       
         <input
           {...register("firstName", { required: true })}
           placeholder="First Name"
         />
-
+       
         <input
           {...register("secondName", { required: true })}
           placeholder="Second Name"
