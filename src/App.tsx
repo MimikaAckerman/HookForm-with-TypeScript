@@ -19,28 +19,36 @@ function App() {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-       
+
+    <div className="container">
+      <div className="contact-box">
+        <div className="left"></div>
+        <div className="right">
+          <h2>Contact with us 🤗</h2>
+          {/* form contact */}
+          <form onSubmit={onSubmit}>
         <input
           {...register("firstName", { required: true })}
-          placeholder="First Name"
+          placeholder="First Name" className="field"
         />
-       
+
         <input
           {...register("secondName", { required: true })}
-          placeholder="Second Name"
+          placeholder="Second Name" className="field"
         />
 
         <input
           {...register("email", { required: true })}
           placeholder="email"
           type="email"
+          className="field"
         />
 
         <input
           {...register("password", { required: true })}
           placeholder="password"
           type="password"
+          className="field"
         />
 
         <input
@@ -50,10 +58,26 @@ function App() {
           })}
           placeholder="confirm your password"
           type="password"
+          className="field"
         />
 
-        <button type="submit">Send information</button>
+        <button className="btn"  type="submit">Send information</button>
       </form>
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+      
     </>
   );
 }
